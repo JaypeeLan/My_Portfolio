@@ -1,5 +1,5 @@
 import React from 'react'
-import { AnimatedSocialIcon } from 'react-animated-social-icons'
+import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import { Form, Input, TextArea, Button, Select } from 'semantic-ui-react'
 
 const Contact = () => {
@@ -27,34 +27,22 @@ const Contact = () => {
       </Form>
 
       <div className="social_icons">
-          <a
-            href="https://github.com/JaypeeLan"
-            target="_blank"
-            className="socials"
-          >
-            <AnimatedSocialIcon
-              brandName="github"
-              animation="bounce"
-              defaultColor="#D1D1D1"
-              hoverColor="red"
-              width="2em"
-              animationDuration={0.8}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/laniranjohnpaul/"
-            target="_blank"
-            className="socials"
-          >
-            <AnimatedSocialIcon
-              brandName="linkedin"
-              width="2em"
-              defaultColor="#D1D1D1"
-              hoverColor="blue"
-              animation="grow"
-            />
-          </a>
-        </div>
+        <a
+          href="https://github.com/JaypeeLan"
+          target="_blank"
+          className="socials"
+        >
+          <BsGithub size={35} color="green"/>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/laniranjohnpaul/"
+          target="_blank"
+          className="socials"
+        >
+          <BsLinkedin  size={35} color="blue"/>
+        </a>
+      </div>
     </section>
   )
 }

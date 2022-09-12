@@ -1,5 +1,7 @@
 import React from 'react'
-import { AnimatedSocialIcon } from 'react-animated-social-icons'
+import { AiFillGithub } from 'react-icons/ai'
+import { MdOutlinePreview } from 'react-icons/md'
+
 import {
   CCard,
   CCardBody,
@@ -23,24 +25,14 @@ const ProjectsReuseComp = ({
         <CCardText>{projectText}</CCardText>
       </CCardBody>
       <CCardBody>
-        <div className="preview_icon" href="#">
-          <AnimatedSocialIcon
-            brandName="github"
-            url={github}
-            animation="bounce"
-            defaultColor="#D1D1D1"
-            hoverColor="red"
-            width="2em"
-            animationDuration={0.8}
-          />
-          <AnimatedSocialIcon
-            brandName="www"
-            url={live}
-            animation="sink"
-            defaultColor="#D1D1D1"
-            hoverColor="red"
-            width="2em"
-          />
+        <div className="preview_icon">
+          <a href={github}>
+            <AiFillGithub size={25} color="red"/>
+          </a>
+
+          <a href={live}>
+            <MdOutlinePreview size={25} />
+          </a>
         </div>
       </CCardBody>
     </CCard>

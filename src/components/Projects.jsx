@@ -36,14 +36,14 @@ const Projects = () => {
         <ProjectsReuseComp
           src={img4}
           projectTitle="JavaScript scroll API"
-          projectText="A landing page for restaurant"
+          projectText="A fully responsive light-themed landing page for restaurant"
           github="https://github.com/JaypeeLan/Restaurant-landing-page.git"
           live="https://restaurant-pagee.netlify.app/"
         />
         <ProjectsReuseComp
           src={img5}
           projectTitle="React + URL shorten API"
-          projectText="Long URLs? Just copy the link and get a shorter link. You get the same result"
+          projectText="Long URLs? Just copy the link and get a shorter link."
           github="https://github.com/JaypeeLan/Url-shortener.git"
           live="https://url-shortenerrr.netlify.app/"
         />
