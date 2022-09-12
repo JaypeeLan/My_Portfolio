@@ -1,0 +1,43 @@
+:root {
+  --biggest-font-size: clamp(40px, 5.5vw, 7rem);
+  --bigger-font-size: clamp(2.5rem, 3vw, 3.5em);
+  --small-font-size: clamp(1.8rem, 2vw, 2rem);
+  --h2-font-size: clamp(2rem, 3vw, 7rem);
+  --bg-brown: #412b2b;
+  --font-color: rgb(233, 230, 227);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000000;
+  color: rgb(233, 230, 227);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+section {
+  height: 100vh;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  color: rgb(225, 0, 255);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover{
+  color: bisque;
+  transition: .1s all ease-in;
+  -webkit-transition: .1s all ease-in;
+  -moz-transition: .1s all ease-in;
+  -ms-transition: .1s all ease-in;
+  -o-transition: .1s all ease-in;
+}
