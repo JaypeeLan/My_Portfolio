@@ -1,5 +1,5 @@
 import React from 'react'
-
+import spiderman from '../images/spiderman-meme_4X.png'
 
 const Landing = () => {
   return (
@@ -8,7 +8,7 @@ const Landing = () => {
         <p className="hi">
           Hi, <span>I am</span>
         </p>
-        <p className='myName'>Laniran JohnPaul</p>
+        <p className="myName">Laniran JohnPaul</p>
         <p>A developer of the web, by the web and for the web</p>
         <p>
           I am a frontend developer interested in bringing your ideas to life,
@@ -25,7 +25,7 @@ const Landing = () => {
       </div>
 
       <div>
-        <img src="src\images\spiderman-meme_4X.png" alt="spiderman" />
+        <img src={spiderman} alt="spiderman" />
         <blockquote class="bp4-blockquote">
           GOOD HTML STRUCTURE = LESS CSS CODE = CLEAN CODE
         </blockquote>
