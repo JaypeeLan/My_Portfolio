@@ -7,26 +7,28 @@ const Contact = () => {
     <section id="contact">
       <h2>Say Hello</h2>
 
-      <form name="contact" method="POST" data-netlify="true">
-        <p>
+      <form
+        name="contact form"
+        method="POST"
+        data-netlify="true"
+        onSubmit="submit"
+      >
+        <input type="hidden" name="form-name" value="contact form" />
+        <div>
           <label>
             Your Name: <input type="text" name="name" />
           </label>
-        </p>
-        <p>
-          <label htmlFor="email">
-            Your Email: <input type="email" name="email" />
-          </label>
-        </p>
 
-        <p>
-          <label htmlFor="Message">
-            Message: <textarea name="message"></textarea>
+          <label htmlFor="email">
+            Your Email: <input id="email" type="email" name="email" />
           </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
+        </div>
+
+        <label htmlFor="Message">
+          Message: <textarea name="message"></textarea>
+        </label>
+
+        <button type="submit">Send</button>
       </form>
 
       <div className="social_icons">
