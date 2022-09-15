@@ -4,7 +4,7 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Flip from 'react-reveal/Flip'
 import Zoom from 'react-reveal/Zoom'
-import Reveal from 'react-reveal/Reveal'
+
 import Navbar from './components/Navbar'
 import 'semantic-ui-css/semantic.min.css'
 import '@blueprintjs/core/lib/css/blueprint.css'
@@ -15,9 +15,7 @@ function App() {
     <div className="App">
       <Navbar />
 
-      <Reveal>
-        <Landing />
-      </Reveal>
+      <Landing />
 
       <About />
 

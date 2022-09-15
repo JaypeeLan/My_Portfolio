@@ -8,6 +8,7 @@ const Contact = () => {
       <h2>Say Hello</h2>
 
       <form
+        netlify
         name="contact form"
         method="POST"
         data-netlify="true"
