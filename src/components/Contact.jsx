@@ -62,22 +62,25 @@ const Contact = () => {
   return (
     <section id="contact">
       <h2>Say Hello</h2>
-      <h1>React and Formspree</h1>
-      <hr />
+    
+
       <form onSubmit={handleOnSubmit}>
-        <label htmlFor="email">Email</label>
+        {/* email */}
         <input
           id="email"
           type="email"
           name="_replyto"
+          placeholder='Email'
           onChange={handleOnChange}
           required
           value={inputs.email}
         />
-        <label htmlFor="message">Message</label>
+        {/* message */}
         <textarea
           id="message"
           name="message"
+          placeholder='Message'
+          rows="9"
           onChange={handleOnChange}
           required
           value={inputs.message}
@@ -91,9 +94,9 @@ const Contact = () => {
         </button>
       </form>
       {status.info.error && (
-        <div className="error">Error: {status.info.msg}</div>
+        <div className="error" style={{textAlign: "center", padding: "15px", color: "red"}}>Error: {status.info.msg}</div>
       )}
-      {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
+      {!status.info.error && status.info.msg && <p style={{textAlign: "center", padding: "15px", color: "green"}}>{status.info.msg}</p>}
 
       {/* ------------------------------------------------------- */}
       <div className="social_icons">
