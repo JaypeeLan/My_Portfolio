@@ -1,67 +1,65 @@
-import React, { useState } from 'react'
-import { BsGithub, BsLinkedin } from 'react-icons/bs'
-import axios from 'axios'
+import React, { useState } from 'react';
+import axios from 'axios';
 
-const Contact = () => {
+export default () => {
   const [status, setStatus] = useState({
     submitted: false,
     submitting: false,
     info: { error: false, msg: null },
-  })
+  });
   const [inputs, setInputs] = useState({
     email: '',
     message: '',
-  })
+  });
   const handleServerResponse = (ok, msg) => {
     if (ok) {
       setStatus({
         submitted: true,
         submitting: false,
         info: { error: false, msg: msg },
-      })
+      });
       setInputs({
         email: '',
         message: '',
-      })
+      });
     } else {
       setStatus({
         info: { error: true, msg: msg },
-      })
+      });
     }
-  }
+  };
   const handleOnChange = (e) => {
-    e.persist()
+    e.persist();
     setInputs((prev) => ({
       ...prev,
       [e.target.id]: e.target.value,
-    }))
+    }));
     setStatus({
       submitted: false,
       submitting: false,
       info: { error: false, msg: null },
-    })
-  }
+    });
+  };
   const handleOnSubmit = (e) => {
-    e.preventDefault()
-    setStatus((prevStatus) => ({ ...prevStatus, submitting: true }))
+    e.preventDefault();
+    setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
     axios({
       method: 'POST',
-      url: 'https://formspree.io/f/mlevjjpg',
+      url: 'https://formspree.io/[your-formspree-endpoint]',
       data: inputs,
     })
       .then((response) => {
         handleServerResponse(
           true,
           'Thank you, your message has been submitted.',
-        )
+        );
       })
       .catch((error) => {
-        handleServerResponse(false, error.response.data.error)
-      })
-  }
+        handleServerResponse(false, error.response.data.error);
+      });
+  };
   return (
-    <section id="contact">
-      <h2>Say Hello</h2>
+    <main>
       <h1>React and Formspree</h1>
       <hr />
       <form onSubmit={handleOnSubmit}>
@@ -94,27 +92,6 @@ const Contact = () => {
         <div className="error">Error: {status.info.msg}</div>
       )}
       {!status.info.error && status.info.msg && <p>{status.info.msg}</p>}
-
-      {/* ------------------------------------------------------- */}
-      <div className="social_icons">
-        <a
-          href="https://github.com/JaypeeLan"
-          target="_blank"
-          className="socials"
-        >
-          <BsGithub size={35} color="green" />
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/laniranjohnpaul/"
-          target="_blank"
-          className="socials"
-        >
-          <BsLinkedin size={35} color="blue" />
-        </a>
-      </div>
-    </section>
-  )
-}
-
-export default Contact
+    </main>
+  );
+};
