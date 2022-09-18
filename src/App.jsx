@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+import loader from '../src/images/nba.gif'
 import Contact from './components/Contact'
 import Landing from './components/Landing'
 import About from './components/About'
@@ -11,21 +13,37 @@ import '@blueprintjs/core/lib/css/blueprint.css'
 import './App.css'
 
 function App() {
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 7100)
+  }, [])
   return (
     <div className="App">
-      <Navbar />
+      {loading ? (
+        <>
+          <img style={{width: "100vw", height: "100vh"}} src={loader} alt="loader"/>
+        </>
+      ) : (
+        <>
+          <Navbar />
 
-      <Landing />
+          <Landing />
 
-      <About />
+          <About />
 
-      <Zoom>
-        <Projects />
-      </Zoom>
+          <Zoom>
+            <Projects />
+          </Zoom>
 
-      <Flip>
-        <Contact />
-      </Flip>
+          <Flip>
+            <Contact />
+          </Flip>
+        </>
+      )}
     </div>
   )
 }

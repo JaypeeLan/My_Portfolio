@@ -1,5 +1,6 @@
 import React from 'react'
 import Reveal from 'react-reveal/Reveal'
+import Zoom from 'react-reveal/Zoom'
 import spiderman from '../images/spiderman-meme_4X.png'
 
 const Landing = () => {
@@ -26,13 +27,16 @@ const Landing = () => {
           </a>
         </div>
       </Reveal>
-      <div>
-        <img src={spiderman} alt="spiderman" />
-        <blockquote class="bp4-blockquote">
-          GOOD HTML STRUCTURE = LESS CSS CODE = CLEAN CODE
-        </blockquote>
-        <h3>Me, 2021</h3>
-      </div>
+
+      <Zoom>
+        <div>
+          <img src={spiderman} alt="spiderman" />
+          <blockquote class="bp4-blockquote">
+            GOOD HTML STRUCTURE = LESS CSS CODE = CLEAN CODE
+          </blockquote>
+          <h3>Me, 2021</h3>
+        </div>
+      </Zoom>
     </section>
   )
 }
