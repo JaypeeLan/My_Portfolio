@@ -5,6 +5,7 @@ import img2 from "../images/cameophotos.png"
 import img3 from "../images/glasssdesign.png"
 import img4 from "../images/restaurant-pagee.png"
 import img5 from "../images/url-shortener.png"
+import img6 from "../images/rest-countries.png"
 
 
 const Projects = () => {
@@ -46,6 +47,13 @@ const Projects = () => {
           projectText="Long URLs? Just copy the link and get a shorter link."
           github="https://github.com/JaypeeLan/Url-shortener.git"
           live="https://url-shortenerrr.netlify.app/"
+        />
+        <ProjectsReuseComp
+          src={img6}
+          projectTitle="React + REST country API"
+          projectText="Few information about countries all over the world."
+          github="https://github.com/JaypeeLan/REST-COUNTRIES.git"
+          live="https://all-rest-countriess.netlify.app/"
         />
       </div>
     </section>
