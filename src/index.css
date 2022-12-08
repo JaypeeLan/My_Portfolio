@@ -16,18 +16,10 @@ body {
   background-color: #000000;
   color: rgb(233, 230, 227);
   overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-.App{
-   scroll-snap-type: y mandatory;
-  max-height: 100vh;
-  overflow-y: scroll;
 }
 
 section {
   min-height: 100vh;
-  scroll-snap-align: start;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -41,11 +33,11 @@ a {
   text-decoration: none;
 }
 
-a:hover{
+a:hover {
   color: bisque;
-  transition: .1s all ease-in;
-  -webkit-transition: .1s all ease-in;
-  -moz-transition: .1s all ease-in;
-  -ms-transition: .1s all ease-in;
-  -o-transition: .1s all ease-in;
+  transition: 0.1s all ease-in;
+  -webkit-transition: 0.1s all ease-in;
+  -moz-transition: 0.1s all ease-in;
+  -ms-transition: 0.1s all ease-in;
+  -o-transition: 0.1s all ease-in;
 }
