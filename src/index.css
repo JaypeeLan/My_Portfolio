@@ -18,6 +18,13 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
+.App{
+   scroll-snap-type: y mandatory;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
 section {
   min-height: 100vh;
   scroll-snap-align: start;
