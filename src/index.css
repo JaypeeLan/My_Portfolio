@@ -19,7 +19,8 @@ body {
   scroll-behavior: smooth;
 }
 section {
-  height: 100vh;
+  min-height: 100vh;
+  scroll-snap-align: start;
   padding-left: 5%;
   padding-right: 5%;
 }
