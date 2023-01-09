@@ -1,12 +1,11 @@
-import React from 'react'
-import ProjectsReuseComp from './ProjectsReuseComp'
-import img1 from '../images/ip-add-tracker.png'
-import img2 from "../images/cameophotos.png"
-import img3 from "../images/glasssdesign.png"
-import img4 from "../images/restaurant-pagee.png"
-import img5 from "../images/url-shortener.png"
-import img6 from "../images/rest-countries.png"
-
+import React from "react";
+import ProjectsReuseComp from "./ProjectsReuseComp";
+import img1 from "../images/ip-add-tracker.png";
+import img2 from "../images/cameophotos.png";
+import img3 from "../images/glasssdesign.png";
+import img4 from "../images/screencapture-youtube-lite-clone-zeta-vercel-app-2023-01-09-23_23_54.png";
+import img5 from "../images/url-shortener.png";
+import img6 from "../images/screencapture-ecommercecloneapp-netlify-app-2023-01-09-23_22_35.png";
 
 const Projects = () => {
   return (
@@ -15,7 +14,7 @@ const Projects = () => {
       <div className="project">
         <ProjectsReuseComp
           src={img1}
-          projectTitle="React + API"
+          projectTitle="React + Leaflet API"
           projectText="Ip Adress tracker to get a location via its public ip address or domain"
           github="https://github.com/JaypeeLan/IP-Address-location-Tracker.git"
           live="https://ip-address-location.netlify.app/"
@@ -29,17 +28,17 @@ const Projects = () => {
         />
         <ProjectsReuseComp
           src={img3}
-          projectTitle="HTML + CSS3"
+          projectTitle="HTML + CSS animation"
           projectText="A login/registration page using glassmorphism design"
           github="https://github.com/JaypeeLan/glassmorphism.git"
           live="https://glasssdesign.netlify.app/"
         />
         <ProjectsReuseComp
           src={img4}
-          projectTitle="JavaScript scroll API"
-          projectText="A fully responsive light-themed landing page for restaurant"
-          github="https://github.com/JaypeeLan/Restaurant-landing-page.git"
-          live="https://restaurant-pagee.netlify.app/"
+          projectTitle="React + Youtube v3 API"
+          projectText="A youtube clone built with React js and Youtube v3 API from Rapid API"
+          github="https://github.com/JaypeeLan/Youtube-lite-clone"
+          live="https://youtube-lite-clone-zeta.vercel.app/"
         />
         <ProjectsReuseComp
           src={img5}
@@ -50,14 +49,14 @@ const Projects = () => {
         />
         <ProjectsReuseComp
           src={img6}
-          projectTitle="React + REST country API"
-          projectText="Few information about countries all over the world."
-          github="https://github.com/JaypeeLan/REST-COUNTRIES.git"
-          live="https://all-rest-countriess.netlify.app/"
+          projectTitle="React + Styled Components"
+          projectText="An Ecommerce clone with few products from fake API store."
+          github="https://github.com/JaypeeLan/ecommerce-clone"
+          live="https://ecommercecloneapp.netlify.app/"
         />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
